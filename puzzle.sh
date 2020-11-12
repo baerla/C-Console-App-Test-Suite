@@ -5,8 +5,15 @@
 g++ -std=c++11 -Wall $1
 
 while read c; do
-  for ((i = 0 ; i < $3 ; i++)); do
-    echo "$c" | ./a.out
+  input=()
+  #echo -e $c
+  input[$i]=$c
+  for (( i = 1; i < $3; i++ )); do
+      read c
+      input[$i]=$c
+      #echo -e "$c"
   done
+  #echo -e "${input[*]}"
+  echo -e "${input[*]}" | ./a.out
 done < $2
 

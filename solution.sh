@@ -16,5 +16,5 @@ done <&0 3< $1
 echo $? > /dev/null
 
 if [ $error == false ]; then
-  echo -e "\e[42mNo errors occurred!"
+  echo -e "\e[42mNo errors occurred in $n puzzles!"
 fi
