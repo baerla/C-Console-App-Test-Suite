@@ -7,7 +7,7 @@ g++ -std=c++11 -Wall $1
 while read c; do
   input=()
   #echo -e $c
-  input[$i]=$c
+  input[0]=$c
   for (( i = 1; i < $3; i++ )); do
       read c
       input[$i]=$c
